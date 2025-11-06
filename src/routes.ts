@@ -2,7 +2,8 @@ import { createBrowserRouter } from "react-router";
 import User from "./pages/User";
 import App from "./App";
 import Home from "./pages/Home";
-import Product from "./pages/Product";
+import Products from "./pages/Products";
+import ProductDetails from "./pages/ProductDetails";
 
 
 const router = createBrowserRouter([
@@ -13,9 +14,17 @@ const router = createBrowserRouter([
       { index: true, Component: Home },
       { path: "/user", Component: User },
       {
-        path: "/product",
-        Component: Product,
+        path: "/products",
+        loader: async () => {
+            await new Promise(resolve => setTimeout(resolve, 50)); // delay de 1s
+            return { message: "Carregado com delay de 1 segundo" };
+        },
+        Component: Products,
       },
+      {
+        path: "/product/:id",
+        Component: ProductDetails
+      }
     ],
   },
 ]);

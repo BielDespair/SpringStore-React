@@ -1,10 +1,10 @@
 
-
-function Home() {
+function Home() {    
     return (
         <>
             <h1>Home</h1>
-            <p>Conteúdo</p>
+            <div>This is home</div>
+
         </>
 
     )

@@ -1,0 +1,27 @@
+
+
+
+
+/* App.css ou seu arquivo de estilo */
+
+/* 1. Definição da animação (exemplo: Slide In da direita) */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(100%); /* Começa fora da tela (direita) */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0); /* Termina na posição normal */
+  }
+}
+
+/* 2. Aplicação da animação à div */
+.page-transition-container {
+  /* Garante que o container anima (se for para slide) */
+  position: relative; 
+  /* Aplica a animação no carregamento do componente */
+  animation: slideIn 0.5s ease-out;
+  /* Certifique-se que o componente antigo não atrapalhe (depende do layout) */
+  width: 100%;
+}
