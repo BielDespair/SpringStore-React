@@ -1,4 +1,5 @@
-
+import { NavLink } from "react-router";
+import "./Header.css";
 
 
 export default function Header() {
@@ -6,12 +7,10 @@ export default function Header() {
 
     return (
     <header>
-        <div>
-            <img src="./src/assets/react.svg"></img>
-        </div>
-        <div>
-
-        </div>
+        <ul>
+            <li><NavLink to={"/"}><h1>Home</h1></NavLink></li>
+            <li><NavLink to={"/user"}><h1>User</h1></NavLink></li>
+        </ul>
     </header>
     )
 }

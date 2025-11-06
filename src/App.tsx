@@ -1,19 +1,16 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Toast from './components/Toast'
-import Header from './components/Header'
+import { Outlet } from "react-router";
+import Header from "./components/Header";
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-    <Header></Header>
-    <Toast></Toast>
+      <Header></Header>
+      <main>
+        <Outlet></Outlet>
+      </main>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
